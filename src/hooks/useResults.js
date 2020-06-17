@@ -8,7 +8,7 @@ export default () => {
 
     const searchApi = async searchTerm => {
         try {
-            console.log('hi there');
+            console.log('Search API called');
             const response = await zomato.get('/search', {
                 params: {
                     q: searchTerm
@@ -26,4 +26,3 @@ export default () => {
     }, []);
     return [searchApi, results, errorMessage];
 };
-
