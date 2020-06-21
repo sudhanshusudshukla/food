@@ -4,7 +4,7 @@ import { View, Image, Text, StyleSheet } from 'react-native';
 const ResultsDetails = ({ result }) => {
     return (
         <View style={styles.container}> 
-            <Image
+            <Image 
             style={styles.image}
                 source={{ uri: result.restaurant.featured_image }}
             />
@@ -17,15 +17,12 @@ const ResultsDetails = ({ result }) => {
 
 const styles = StyleSheet.create({
     container: {
-        marginLeft: 10
+         marginRight:10
     },
     image: {
             borderRadius:4,
             width:250,
-            height:120
-           
-
-
+            height:120,
     },
     name: {
         fontWeight: 'bold',

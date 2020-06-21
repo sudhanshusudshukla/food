@@ -4,7 +4,8 @@ import SearchBar from '../components/SearchBar';
 import useResults from '../hooks/useResults';
 import ResultList from '../components/ResultList';
 
-
+//better to pass diretly in result List therefore De-structing code
+//const SearchScreen = ({ navigation })
 
 const SearchScreen = () => {
     const [term, setTerm] = useState('');
@@ -28,9 +29,15 @@ const SearchScreen = () => {
             {errorMessage ? <Text>{errorMessage}</Text> : null}
             {/* <Text>We have found {results.length} restaurants</Text> */}
             <ScrollView style={styles.restaurantTitle}>
-            <ResultList  results={filterResultsByPrice(400)} title="CostEffective" />
-            <ResultList  results={filterResultsByPrice(1600)} title="Big Pricier" />
-            <ResultList   results={filterResultsByPrice(2500)} title="Big Spender " />
+            <ResultList  results={filterResultsByPrice(400)} 
+            title="CostEffective"
+             />
+            <ResultList  results={filterResultsByPrice(1600)}
+             title="Big Pricier"
+              />
+            <ResultList   results={filterResultsByPrice(2500)}
+             title="Big Spender " 
+            />
             </ScrollView>
         </View>
     );
@@ -39,10 +46,11 @@ const SearchScreen = () => {
 const styles = StyleSheet.create({
     backgroundMain: {
         backgroundColor: '#ffffff',
-        flex: 1
+        flex: 1,
+        marginLeft: 20
     },
     restaurantTitle: {
-        marginLeft:10
+        // marginLeft:10
     }
 });
 
